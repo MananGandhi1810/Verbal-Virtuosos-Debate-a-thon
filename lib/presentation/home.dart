@@ -83,6 +83,7 @@ class _MyHomeState extends State<MyHome> {
                           userUid: projectData["uid"],
                           name: projectData["user_name"],
                           id: projects[index].id,
+                          timestamp: projectData["timestamp"],
                         ),
                       );
                     },

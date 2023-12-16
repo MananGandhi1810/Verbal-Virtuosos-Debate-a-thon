@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:timeago/timeago.dart' as timeago;
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectDetails extends StatefulWidget {
@@ -163,6 +164,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     .collection("projects")
                     .doc(widget.project["id"])
                     .collection("comments")
+                    .orderBy("timestamp", descending: true)
                     .snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {

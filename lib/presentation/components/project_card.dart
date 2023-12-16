@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,6 +14,7 @@ class ProjectCard extends StatefulWidget {
     required this.userUid,
     required this.name,
     required this.id,
+    required this.timestamp,
   });
 
   final String projectName;
@@ -23,6 +25,7 @@ class ProjectCard extends StatefulWidget {
   final String userUid;
   final String name;
   final String id;
+  final Timestamp timestamp;
 
   @override
   State<ProjectCard> createState() => _ProjectCardState();
@@ -43,6 +46,7 @@ class _ProjectCardState extends State<ProjectCard> {
             "userUid": widget.userUid,
             "name": widget.name,
             "id": widget.id,
+            "timestamp": widget.timestamp,
           });
         },
         child: Column(
