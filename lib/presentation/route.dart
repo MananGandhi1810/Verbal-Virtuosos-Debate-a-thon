@@ -14,6 +14,8 @@ class main_page extends StatefulWidget {
 }
 
 class _main_pageState extends State<main_page> {
+  var userExists = false;
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
@@ -22,10 +24,10 @@ class _main_pageState extends State<main_page> {
         if (snapshot.hasData) {
           final user = FirebaseAuth.instance.currentUser;
           final _firestore = FirebaseFirestore.instance;
-          var userExists = false;
           _firestore.collection("users").doc(user!.uid).get().then((value) {
-            debugPrint("User exists: ${value.exists}");
-            userExists = value.exists;
+            setState(() {
+              userExists = value.exists;
+            });
           });
           if (userExists) {
             return const MyHome();

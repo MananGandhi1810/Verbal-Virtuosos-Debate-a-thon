@@ -2,21 +2,26 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class RegisterUserInfo extends StatefulWidget {
-  const RegisterUserInfo({super.key});
+class EditDetails extends StatefulWidget {
+  const EditDetails({
+    super.key,
+    required this.userDetails,
+  });
+
+  final Map<String, dynamic> userDetails;
 
   @override
-  State<RegisterUserInfo> createState() => _RegisterUserInfoState();
+  State<EditDetails> createState() => _EditDetailsState();
 }
 
-class _RegisterUserInfoState extends State<RegisterUserInfo> {
+class _EditDetailsState extends State<EditDetails> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
-  final List<String> _followedTags = [];
+  List _followedTags = [];
   final List<String> _allTags = [
     "Technology",
     "Business",
@@ -32,6 +37,16 @@ class _RegisterUserInfoState extends State<RegisterUserInfo> {
     "Lifestyle",
     "Culture",
   ];
+
+  @override
+  void initState() {
+    _usernameController.text = widget.userDetails["username"];
+    _nameController.text = widget.userDetails["name"];
+    _emailController.text = widget.userDetails["email"];
+    _descriptionController.text = widget.userDetails["description"];
+    _followedTags = widget.userDetails["followedTags"];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
