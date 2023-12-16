@@ -164,6 +164,7 @@ class _ProfileState extends State<Profile> {
                           username: project["username"],
                           userUid: project["uid"],
                           name: project["user_name"],
+                          id: project.id,
                         );
                       },
                     );

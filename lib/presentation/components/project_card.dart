@@ -12,6 +12,7 @@ class ProjectCard extends StatefulWidget {
     required this.username,
     required this.userUid,
     required this.name,
+    required this.id,
   });
 
   final String projectName;
@@ -21,6 +22,7 @@ class ProjectCard extends StatefulWidget {
   final String username;
   final String userUid;
   final String name;
+  final String id;
 
   @override
   State<ProjectCard> createState() => _ProjectCardState();
@@ -40,6 +42,7 @@ class _ProjectCardState extends State<ProjectCard> {
             "username": widget.username,
             "userUid": widget.userUid,
             "name": widget.name,
+            "id": widget.id,
           });
         },
         child: Column(

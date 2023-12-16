@@ -147,11 +147,12 @@ class _AddProjectState extends State<AddProject> {
                             .doc(user!.uid)
                             .get()
                             .then((value) {
+                          var time = DateTime.now();
                           var project = {
                             "name": _projectNameController.text,
                             "description": _projectDescriptionController.text,
                             "link": _projectLinkController.text,
-                            "timestamp": DateTime.now(),
+                            "timestamp": time,
                             "tags": _projectTags,
                             "uid": user!.uid,
                             "username": user!.displayName,

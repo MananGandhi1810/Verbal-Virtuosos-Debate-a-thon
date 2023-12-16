@@ -4,15 +4,9 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   cloud_firestore
-  connectivity_plus
-  dart_vlc
-  desktop_drop
-  file_selector_windows
   firebase_auth
   firebase_core
-  share_plus
   smart_auth
-  thumblr_windows
   url_launcher_windows
 )
 
