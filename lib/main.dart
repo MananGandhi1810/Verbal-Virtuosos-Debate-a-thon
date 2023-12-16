@@ -1,9 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:hackathon_tark/home.dart';
-import 'package:hackathon_tark/phone.dart';
-import 'package:hackathon_tark/route.dart';
-import 'package:hackathon_tark/verify.dart';
+import 'package:hackathon_tark/presentation/route.dart';
+
+import 'presentation/home.dart';
+import 'presentation/phone.dart';
+import 'presentation/verify.dart';
 
 import 'firebase_options.dart';
 
