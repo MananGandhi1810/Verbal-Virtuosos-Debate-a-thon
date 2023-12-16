@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'phone.dart';
 import 'package:pinput/pinput.dart';
 
+import 'phone.dart';
 
 class MyVerify extends StatefulWidget {
   const MyVerify({Key? key}) : super(key: key);
@@ -13,7 +13,8 @@ class MyVerify extends StatefulWidget {
 }
 
 class _MyVerifyState extends State<MyVerify> {
-  final GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
+  final GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey =
+      GlobalKey<ScaffoldMessengerState>();
 
   final FirebaseAuth auth = FirebaseAuth.instance;
 
@@ -27,13 +28,17 @@ class _MyVerifyState extends State<MyVerify> {
           color: Color.fromRGBO(30, 60, 87, 1),
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        border: Border.all(color: const Color.fromRGBO(234, 239, 243, 1)),
+        border: Border.all(
+          color: const Color.fromRGBO(234, 239, 243, 1),
+        ),
         borderRadius: BorderRadius.circular(20),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: const Color.fromRGBO(114, 178, 238, 1)),
+      border: Border.all(
+        color: const Color.fromRGBO(114, 178, 238, 1),
+      ),
       borderRadius: BorderRadius.circular(8),
     );
 
@@ -42,7 +47,7 @@ class _MyVerifyState extends State<MyVerify> {
         color: const Color.fromRGBO(234, 239, 243, 1),
       ),
     );
-    var code="";
+    var code = "";
     return Scaffold(
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
@@ -71,7 +76,10 @@ class _MyVerifyState extends State<MyVerify> {
               ),
               const Text(
                 "Phone Verification",
-                style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 10,
@@ -95,9 +103,8 @@ class _MyVerifyState extends State<MyVerify> {
 
                 showCursor: true,
                 onCompleted: (pin) => print(pin),
-                onChanged: (value)
-                {
-                  code=value;
+                onChanged: (value) {
+                  code = value;
                 },
               ),
               const SizedBox(
@@ -108,41 +115,59 @@ class _MyVerifyState extends State<MyVerify> {
                 height: 45,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.blueAccent,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10))),
-
-                    onPressed: () async{
-                      try{
-                        PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: MyPhone.verify, smsCode: code);
+                      backgroundColor: Colors.blueAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    onPressed: () async {
+                      try {
+                        PhoneAuthCredential credential =
+                            PhoneAuthProvider.credential(
+                          verificationId: MyPhone.verify,
+                          smsCode: code,
+                        );
                         await auth.signInWithCredential(credential);
-                        Navigator.pushNamedAndRemoveUntil(context, "main", (route) => false);
-
-                      }
-
-                      catch(e)
-                      {
-                        final snackbar = const SnackBar(content: Text("Invalid OTP"));
+                        final firestore = FirebaseFirestore.instance;
+                        final user = FirebaseAuth.instance.currentUser;
+                        final userDoc = firestore.doc("users/${user!.uid}");
+                        if ((await userDoc.get()).exists) {
+                          Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            'main',
+                            (route) => false,
+                          );
+                          return;
+                        }
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          "user_info_registration",
+                          (route) => false,
+                        );
+                      } catch (e) {
+                        const snackbar = SnackBar(
+                          content: Text("Invalid OTP"),
+                        );
                         ScaffoldMessenger.of(context).showSnackBar(snackbar);
                       }
-
                     },
                     child: const Text("Verify Phone Number")),
               ),
               Row(
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(
-                          context,
-                          'phone',
-                              (route) => false,
-                        );
-                      },
-                      child: const Text(
-                        "Edit Phone Number ?",
-                        style: TextStyle(color: Colors.white),
-                      ))
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        'phone',
+                        (route) => false,
+                      );
+                    },
+                    child: const Text(
+                      "Edit Phone Number ?",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )
                 ],
               )
             ],
