@@ -20,8 +20,9 @@ void main() async {
   // var launchService = LaunchService();
   runApp(
     MaterialApp(
+
       initialRoute: 'main',
-      theme: ThemeData(fontFamily: 'Jura'),
+      theme: ThemeData(fontFamily: 'Jura', useMaterial3: true),
       debugShowCheckedModeBanner: false,
       routes: {
         'phone': (context) => const MyPhone(),
