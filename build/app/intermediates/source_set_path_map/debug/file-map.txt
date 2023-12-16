@@ -1,0 +1,21 @@
+com.example.hackathon_tark.app-jetified-window-1.0.0-beta04-0 /Users/siddhpurohit/.gradle/caches/transforms-3/18aed9bf87fc054bde2369bbce815f68/transformed/jetified-window-1.0.0-beta04/res
+com.example.hackathon_tark.app-jetified-annotation-experimental-1.1.0-1 /Users/siddhpurohit/.gradle/caches/transforms-3/33edf3ee0517c86776bd6cb7682045f3/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.hackathon_tark.app-browser-1.4.0-2 /Users/siddhpurohit/.gradle/caches/transforms-3/3d4b5db11bf2fad537013066bd937ed1/transformed/browser-1.4.0/res
+com.example.hackathon_tark.app-jetified-play-services-basement-18.1.0-3 /Users/siddhpurohit/.gradle/caches/transforms-3/98537e5ec70bbb9b95a3c4905239e936/transformed/jetified-play-services-basement-18.1.0/res
+com.example.hackathon_tark.app-jetified-firebase-common-20.4.2-4 /Users/siddhpurohit/.gradle/caches/transforms-3/b29de336eedfa9390b65176ca920839a/transformed/jetified-firebase-common-20.4.2/res
+com.example.hackathon_tark.app-jetified-window-java-1.0.0-beta04-5 /Users/siddhpurohit/.gradle/caches/transforms-3/c432125e31208403c91c32696aef3709/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.hackathon_tark.app-core-1.6.0-6 /Users/siddhpurohit/.gradle/caches/transforms-3/cfb1b99aff7ad9cf4c1b8532c6075063/transformed/core-1.6.0/res
+com.example.hackathon_tark.app-jetified-play-services-auth-20.4.0-7 /Users/siddhpurohit/.gradle/caches/transforms-3/e94ff526965c2c1f13c79f665fc3d8a2/transformed/jetified-play-services-auth-20.4.0/res
+com.example.hackathon_tark.app-jetified-play-services-base-18.0.1-8 /Users/siddhpurohit/.gradle/caches/transforms-3/f46872f19fc48f4d97e8ffc9ee9d6807/transformed/jetified-play-services-base-18.0.1/res
+com.example.hackathon_tark.app-debug-9 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/android/app/src/debug/res
+com.example.hackathon_tark.app-main-10 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/android/app/src/main/res
+com.example.hackathon_tark.app-pngs-11 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/app/generated/res/pngs/debug
+com.example.hackathon_tark.app-resValues-12 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/app/generated/res/resValues/debug
+com.example.hackathon_tark.app-rs-13 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/app/generated/res/rs/debug
+com.example.hackathon_tark.app-mergeDebugResources-14 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.hackathon_tark.app-mergeDebugResources-15 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.hackathon_tark.app-merged_res-16 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/app/intermediates/merged_res/debug
+com.example.hackathon_tark.app-packaged_res-17 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/cloud_firestore/intermediates/packaged_res/debug
+com.example.hackathon_tark.app-packaged_res-18 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/firebase_auth/intermediates/packaged_res/debug
+com.example.hackathon_tark.app-packaged_res-19 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/firebase_core/intermediates/packaged_res/debug
+com.example.hackathon_tark.app-packaged_res-20 /Users/siddhpurohit/Developer/Flutter projects/GitHub/Verbal_Virtusos/build/smart_auth/intermediates/packaged_res/debug

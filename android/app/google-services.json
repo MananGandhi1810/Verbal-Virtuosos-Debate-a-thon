@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "211435287671",
+    "project_id": "verbal-virtuosos-debate-a-thon",
+    "storage_bucket": "verbal-virtuosos-debate-a-thon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211435287671:android:9abdc686bcd74d3b0f4272",
+        "android_client_info": {
+          "package_name": "com.example.hackathon_tark"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX5eqNDE292cGrvoc3pIcC0ksinWmfh8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
