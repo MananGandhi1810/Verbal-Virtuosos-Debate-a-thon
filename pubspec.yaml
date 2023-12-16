@@ -39,6 +39,7 @@ dependencies:
   firebase_auth: ^4.15.3
   cloud_firestore: ^4.13.6
   pinput: ^3.0.1
+  stream_chat_flutter: ^7.0.1
 
 dev_dependencies:
   flutter_test:

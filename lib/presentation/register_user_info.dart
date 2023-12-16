@@ -62,13 +62,11 @@ class _RegisterUserInfoState extends State<RegisterUserInfo> {
                         return "Please enter a valid username";
                       }
                       final user = _firestore
-                          .collection("users")
-                          .where("username", isEqualTo: value);
-                      user.get().then((value) {
-                        if (value.docs.isNotEmpty) {
-                          return "Username already exists";
-                        }
-                      });
+                          .collection("users").where('username', isEqualTo: value).get();
+                      debugPrint(user.toString() );
+
+
+
                       return null;
                     },
                   ),

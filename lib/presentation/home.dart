@@ -25,6 +25,8 @@ class _MyHomeState extends State<MyHome> {
             ElevatedButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut();
+                Navigator.pushNamed(context, 'main');
+
               },
               child: const Text("Logout"),
             ),
