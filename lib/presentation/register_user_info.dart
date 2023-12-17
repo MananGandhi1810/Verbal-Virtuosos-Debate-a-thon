@@ -165,7 +165,7 @@ class _RegisterUserInfoState extends State<RegisterUserInfo> {
                             .collection("users")
                             .doc(currentUser.uid)
                             .set(user);
-                        Navigator.pushNamed(context, 'home');
+                        Navigator.pushReplacementNamed(context, 'home');
                       }
                     },
                     child: const Text("Submit"),

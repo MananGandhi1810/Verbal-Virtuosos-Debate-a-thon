@@ -180,7 +180,7 @@ class _EditDetailsState extends State<EditDetails> {
                             .collection("users")
                             .doc(currentUser.uid)
                             .set(user);
-                        Navigator.pushNamed(context, 'home');
+                        Navigator.pop(context);
                       }
                     },
                     child: const Text("Submit"),

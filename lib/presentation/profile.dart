@@ -56,6 +56,15 @@ class _ProfileState extends State<Profile> {
               },
               icon: const Icon(Icons.edit),
             ),
+          if(widget.uid != loggedInUser!.uid)
+            IconButton(
+              onPressed: () {
+                FirebaseAuth.instance.signOut();
+                Navigator.pushNamedAndRemoveUntil(
+                    context, 'main', (route) => false);
+              },
+              icon: const Icon(Icons.logout),
+            ),
           if (widget.uid != loggedInUser!.uid)
             IconButton(
               onPressed: () {

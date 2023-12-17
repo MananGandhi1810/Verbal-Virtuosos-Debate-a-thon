@@ -20,9 +20,11 @@ void main() async {
   // var launchService = LaunchService();
   runApp(
     MaterialApp(
-
       initialRoute: 'main',
-      theme: ThemeData(fontFamily: 'Jura', useMaterial3: true),
+      theme: ThemeData(
+        fontFamily: 'Jura',
+        useMaterial3: true,
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
         'phone': (context) => const MyPhone(),
@@ -35,11 +37,13 @@ void main() async {
               uid: ModalRoute.of(context)!.settings.arguments as String,
             ),
         "project_details": (context) => ProjectDetails(
-          project: ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>,
-        ),
+              project: ModalRoute.of(context)!.settings.arguments
+                  as Map<String, dynamic>,
+            ),
         "edit_details": (context) => EditDetails(
-          userDetails: ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>,
-        ),
+              userDetails: ModalRoute.of(context)!.settings.arguments
+                  as Map<String, dynamic>,
+            ),
       },
     ),
   );

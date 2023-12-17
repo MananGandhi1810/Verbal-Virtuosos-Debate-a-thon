@@ -1,0 +1,110 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --quiet assemble --no-version-check --depfile D:\Coding\flutter_projects\Verbal_Virtusos\build\app\intermediates\flutter\release/flutter_build.d --output D:\Coding\flutter_projects\Verbal_Virtusos\build\app\intermediates\flutter\release -dTargetFile=lib\main.dart -dTargetPlatform=android -dBuildMode=release -dTrackWidgetCreation=true -dTreeShakeIcons=true android_aot_bundle_release_android-arm android_aot_bundle_release_android-arm64 android_aot_bundle_release_android-x64
+
+## exception
+
+FileSystemException: FileSystemException: Failed to decode data using encoding 'utf-8', path = 'D:\Coding\flutter_projects\Verbal_Virtusos\.dart_tool\flutter_build\782abe92f22377666394c26a20899c8b\kernel_snapshot.d'
+
+```
+#0      _File._tryDecode (dart:io/file_impl.dart:615:7)
+#1      _File.readAsStringSync (dart:io/file_impl.dart:624:7)
+#2      ForwardingFile.readAsStringSync (package:file/src/forwarding/forwarding_file.dart:99:16)
+#3      ErrorHandlingFile.readAsStringSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:218:22)
+#4      _runSync (package:flutter_tools/src/base/error_handling_io.dart:590:14)
+#5      ErrorHandlingFile.readAsStringSync (package:flutter_tools/src/base/error_handling_io.dart:217:12)
+#6      SourceVisitor.visitDepfile (package:flutter_tools/src/build_system/source.dart:55:37)
+#7      List.forEach (dart:core-patch/growable_array.dart:416:8)
+#8      Target._resolveConfiguration (package:flutter_tools/src/build_system/build_system.dart:251:14)
+#9      Target.resolveInputs (package:flutter_tools/src/build_system/build_system.dart:196:12)
+#10     Target._toNode (package:flutter_tools/src/build_system/build_system.dart:149:39)
+#11     Target._toNode (package:flutter_tools/src/build_system/build_system.dart:156:58)
+#12     Target._toNode (package:flutter_tools/src/build_system/build_system.dart:156:58)
+#13     Target._toNode (package:flutter_tools/src/build_system/build_system.dart:156:58)
+#14     FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:609:30)
+#15     AssembleCommand.runCommand (package:flutter_tools/src/commands/assemble.dart:315:51)
+#16     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1662:12)
+<asynchronous suspension>
+#17     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1350:27)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#19     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#20     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:348:9)
+<asynchronous suspension>
+#21     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#22     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:294:5)
+<asynchronous suspension>
+#23     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:112:9)
+<asynchronous suspension>
+#24     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#25     main (package:flutter_tools/executable.dart:90:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.16.3, on Microsoft Windows [Version 10.0.22631.2861], locale en-IN)
+    • Flutter version 3.16.3 on channel stable at C:\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision b0366e0a3f (11 days ago), 2023-12-05 19:46:39 -0800
+    • Engine revision 54a7145303
+    • Dart version 3.2.3
+    • DevTools version 2.28.4
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\DELL\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 34.0.0
+    • ANDROID_SDK_ROOT = C:\Users\DELL\AppData\Local\Android\sdk
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 17.0.7+0-b2043.56-10550314)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop Windows apps (Visual Studio Build Tools 2019 16.11.23)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
+    • Visual Studio Build Tools 2019 version 16.11.33214.272
+    ✗ The current Visual Studio installation is incomplete.
+      Please use Visual Studio Installer to complete the installation or reinstall Visual Studio.
+
+[✓] Android Studio (version 2023.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.7+0-b2043.56-10550314)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2021.3)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA 2021.2
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.85.1)
+    • VS Code at C:\Users\DELL\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.52.0
+
+[✓] Connected device (4 available)
+    • sdk gphone x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Windows (desktop)       • windows       • windows-x64    • Microsoft Windows [Version 10.0.22631.2861]
+    • Chrome (web)            • chrome        • web-javascript • Google Chrome 119.0.6045.200
+    • Edge (web)              • edge          • web-javascript • Microsoft Edge 120.0.2210.61
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```
