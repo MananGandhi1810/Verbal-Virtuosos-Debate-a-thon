@@ -56,7 +56,7 @@ class _ProfileState extends State<Profile> {
               },
               icon: const Icon(Icons.edit),
             ),
-          if(widget.uid != loggedInUser!.uid)
+          if(widget.uid == loggedInUser!.uid)
             IconButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut();
