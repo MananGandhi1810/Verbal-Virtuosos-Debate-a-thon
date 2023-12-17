@@ -49,7 +49,7 @@ class _MyVerifyState extends State<MyVerify> {
     );
     var code = "";
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -59,7 +59,7 @@ class _MyVerifyState extends State<MyVerify> {
           },
           icon: const Icon(
             Icons.arrow_back_ios_rounded,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         elevation: 0,
@@ -77,7 +77,7 @@ class _MyVerifyState extends State<MyVerify> {
               const Text(
                 "Phone Verification",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 22,
                     fontWeight: FontWeight.bold),
               ),
@@ -87,7 +87,7 @@ class _MyVerifyState extends State<MyVerify> {
               const Text(
                 "We need to register your phone without getting started!",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16,
                 ),
                 textAlign: TextAlign.center,
@@ -151,7 +151,12 @@ class _MyVerifyState extends State<MyVerify> {
                         ScaffoldMessenger.of(context).showSnackBar(snackbar);
                       }
                     },
-                    child: const Text("Verify Phone Number")),
+                    child: const Text("Verify Phone Number",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16
+                    ),
+                    )),
               ),
               Row(
                 children: [
@@ -165,7 +170,7 @@ class _MyVerifyState extends State<MyVerify> {
                     },
                     child: const Text(
                       "Edit Phone Number ?",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   )
                 ],
